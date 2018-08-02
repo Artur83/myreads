@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import './App.css';
 
 import Library from './components/library';
@@ -52,6 +52,7 @@ class BooksApp extends React.Component {
 
     return (
       <div className="app">
+      <Switch>
         <Route path="/search" render={ () => (
           //Search Page
           <Search
@@ -65,7 +66,8 @@ class BooksApp extends React.Component {
             books={ books }
             updateBookShelf={ this.updateBookShelf }
           />
-        ) } />
+      ) } />
+      </Switch>
       </div>
     );
   }

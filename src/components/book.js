@@ -36,11 +36,11 @@ class Book extends Component {
                             value={ shelf }
                             onChange={ (event) => this.changeBookShelf(event.target.value) }
                         >
-                            <option value="none" disabled>Move to...</option>
+                            <option value="move to" disabled>Move to...</option>
                             <option value="currentlyReading">Currently Reading</option>
                             <option value="wantToRead">Want to Read</option>
                             <option value="read">Read</option>
-                            <option value="none">Remove Book</option>
+                            <option value="none">None</option>
                         </select>
                     </div>
                 </div>
